@@ -1,0 +1,7 @@
+rules:
+  - id: avoid-debug-mode
+    message: Avoid enabling Flask debug mode in committed production code.
+    severity: WARNING
+    languages: [python]
+    patterns:
+      - pattern: app.run(..., debug=True, ...)
